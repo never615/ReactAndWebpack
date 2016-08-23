@@ -25,11 +25,27 @@ function get(url) {
 }
 
 get('https://hacker-news.firebaseio.com/v0/topstories.json')
-    .then(function (stories) {
-        return Promise.all(stories.slice(0, 30)
+    .then(
+        stories=>Promise.all(stories.slice(0, 30)
             .map(itemId=>get('https://hacker-news.firebaseio.com/v0/item/' + itemId + '.json')))
-    }).then(function (items) {
-    render(<NewsList items={items}/>, $('#content')[0]);
-}).catch(function (err) {
-    console.log("error occur", err);
-});
+    )
+    .then(
+        items=>render(<NewsList items={items}/>, $('#content')[0])
+    )
+    .catch(
+        err=> console.log("error occur", err)
+    );
+
+
+// get('https://hacker-news.firebaseio.com/v0/topstories.json')
+//     .then(function (stories) {
+//         return Promise
+//             .all(stories.slice(0, 30)
+//                 .map(itemId=>get('https://hacker-news.firebaseio.com/v0/item/' + itemId + '.json')))
+//     })
+//     .then(function (items) {
+//         render(<NewsList items={items}/>, $('#content')[0]);
+//     })
+//     .catch(function (err) {
+//         console.log("error occur", err);
+//     });
