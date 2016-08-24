@@ -6,7 +6,7 @@
 import $ from 'jquery';
 import React from 'react';
 import {render} from 'react-dom';
-import NewsList from './NewsList.js';
+import NewsList from './hacker/NewsList.js';
 import '../static/css/app.css'
 
 // class HelloWorld extends React.Component{

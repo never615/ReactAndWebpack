@@ -6,12 +6,10 @@
 import $ from 'jquery';
 import React from 'react';
 import {render} from 'react-dom';
-import Demo2 from './demo1/Demo2';
+import Demo from './demo1/Demo';
 
-render(
-    <Demo2 source="https://api.github.com/users/octocat/gists"/>,
-    $('#content')[0]
-);
+render(<Demo name={"world"}/>,$('#content')[0]);
+
 
 
 

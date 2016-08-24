@@ -33,23 +33,23 @@ export default class NewsHeader extends React.Component {
                 url: 'newcomments'
             },
             {
-                name:'ask',
-                url:'ask'
+                name: 'ask',
+                url: 'ask'
             },
             {
-                name:'jobs',
-                url:'jobs'
+                name: 'jobs',
+                url: 'jobs'
             },
             {
-                name:'submit',
-                url:'submit'
+                name: 'submit',
+                url: 'submit'
             }
         ];
         return (
             <div className="newsHeader-nav">
                 {
                     navLinks.map(function (navLink) {
-                        return(
+                        return (
                             <a
                                 key={navLink.url}
                                 className="newsHeader-navLink newsHeader-textLink"
@@ -64,8 +64,8 @@ export default class NewsHeader extends React.Component {
         );
     }
 
-    getLogin(){
-        return(
+    getLogin() {
+        return (
             <div className="newsHeader-login">
                 <a className="newsHeader-textLink" href="https://news.ycombinator.com/login?goto=news">login</a>
             </div>

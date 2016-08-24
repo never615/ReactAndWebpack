@@ -28,7 +28,7 @@ var newEntry = [
     'webpack/hot/only-dev-server' // "only" prevents reload on syntax errors
 ];
 
-config.entry = newEntry.concat(config.entry.app);
+config.entry = newEntry.concat(config.entry);
 
 
 new WebpackDevServer(webpack(config), {
